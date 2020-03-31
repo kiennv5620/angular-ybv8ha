@@ -8,7 +8,10 @@ import { AdminComponent } from './admin/admin.component';
 import { ProductService } from './product.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule],
   declarations: [ AppComponent, HelloComponent, AdminComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
