@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProductService } from './product.service';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [BrowserModule,
+  imports:      [
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule],
