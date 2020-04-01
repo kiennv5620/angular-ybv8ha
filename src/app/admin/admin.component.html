@@ -58,14 +58,14 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" >
+        <a class="nav-link collapsed" routerLink="/product-list" >
           <span>Product List</span>
         </a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" >
+        <a class="nav-link collapsed" routerLink="/product/add" >
           <span>Product ADD</span>
         </a>
       </li>
@@ -165,56 +165,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Product List</h1>
-          <p class="mb-4">You can see the product list here.</p>
-
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Table Product List</h6>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>price</th>
-                      <th>describe</th>
-                      <th>status</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>price</th>
-                      <th>describe</th>
-                      <th>status</th>
-                      <th>Action</th>
-                    </tr>
-                  </tfoot>
-                  <tbody *ngFor="let product of products">
-                    <tr>
-                      <td>{{product.name}}</td>
-                      <td>${{product.price}}</td>
-                      <td>{{product.desc}}</td>
-                      <td>{{product.status ? 'In stock': 'Out stock'}}</td>
-                      <td>          
-                        <button class="btn btn-primary" routerLink="/product/{{product.id}}">Detale</button>  
-                        <button class="btn btn-primary" (click)="removeItem(product.id)">Remove</button>
-                      </td>
-                        
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
+  <router-outlet></router-outlet>
         </div>
         <!-- /.container-fluid -->
 

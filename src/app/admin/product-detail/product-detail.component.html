@@ -1,0 +1,21 @@
+
+<div class="page-detail" *ngIf="product">
+            <h1 class="h3 mb-2 text-gray-800">Product Detail</h1>
+          <p class="mb-4">You can see the product Detail here.</p>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+    <div class="row">
+      
+      <div class="col-6" >
+        <img src="{{product.img}}" alt="" class="img-fluid" height="200" width="200" >
+      </div>
+      <div class="col-6">
+        <h2>{{product.name}}</h2>
+        <p>{{product.price}}</p>
+        <p>{{product.desc}}</p>
+        <p>{{product.status ? 'In stock': 'Out stock'}}</p>
+        <button class="btn btn-primary" routerLink="/product-list">Product List</button>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+<h2>Add Product</h2>
+<form class="w-50 mx-auto mt-3">
+
+  <div class="form-group">
+    <label for="">  {{address}}</label>
+    <input type="text" name="img" class="form-control"placeholder="image" [(ngModel)]="product.img">
+    <input type="text" name="name" class="form-control"placeholder="Product Name" [(ngModel)]="product.name">
+    <input type="text" name="price" class="form-control"placeholder="Price" [(ngModel)]="product.price">
+    <input type="text" name="desc" class="form-control"placeholder="describe" [(ngModel)]="product.desc">
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="true">
+  <label class="form-check-label" for="inlineRadio1">In Stock</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="false">
+  <label class="form-check-label" for="inlineRadio2">Out Stock</label>
+</div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+</form>
